@@ -1,0 +1,325 @@
+@font-face {
+  font-family: 'milkyway';
+  src: url('fonts/milkyway.ttf');
+}
+@font-face {
+  font-family: 'lemonade';
+  src: url('fonts/lemonade.ttf');
+}
+/* ABOUT PAGE */
+.about {
+  background-color: lightblue;
+   background-image: url('images/backgroundlucky.jpg');
+  background-size: cover;        /* fills the screen */
+  background-position: center;   /* centers the image */
+  background-repeat: no-repeat;  /* no tiling */
+
+  
+font-family: 'milkyway', sans-serif;
+   height: 100vh;
+  position: relative; /* IMPORTANT */
+}
+
+/* TEXT */
+a {
+  font-size: 200px;
+  text-decoration: none;
+  color: black;
+}
+
+/* LUCKY PAGE */
+.lucky {
+  background-color:#c2b39f;
+  font-family: 'milkyway', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+.paw-tab {
+  position: absolute;
+  top: 215px;
+  left: 28%;
+  transform: none;
+  
+}
+
+/* text stays on top */
+.paw-text {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+transition: all 0.3s ease;
+  font-size: 55px;
+  text-decoration: none;
+  color: black;
+
+}
+
+
+/* IN PAGE */
+.in {
+  background-color: #2c2019;
+   font-family: 'milkyway', sans-serif;
+color: #c2b39f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.in a {
+  color: #c2b39f;
+  text-decoration: none;
+}
+/* MEMORY PAGE */
+.memory {
+  background-color: #937452;
+   font-family: 'milkyway', sans-serif;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  pointer-events: none; /* IMPORTANT */
+}
+
+
+.lucky-text {
+  position: relative;
+  z-index: 1;
+}
+
+
+.bone-button {
+  position: absolute;
+  bottom: 140px;
+  left: 49%;
+  transform: translateX(-50%);
+
+  display: inline-block;
+
+  z-index: 10;
+}
+
+.bone-button img {
+  width: 260px;
+  height: auto;
+  display: block;
+
+  transition: transform 0.3s ease;
+}
+
+.bone-button:hover img {
+  transform: scale(1.04);
+}
+
+.tag-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  font-family: 'lemonade', sans-serif;
+  font-size: 32px;
+
+  color: black;
+  text-decoration: none;
+
+  pointer-events: none;
+}
+
+.memory-box {
+  position: absolute;
+  right: 200px;
+  top: 400px;
+
+  width: 560px;
+  padding: 20px;
+
+  background-color: #fff8f5; /* soft warm tone */
+  border: 5px solid #000000;
+  border-radius: 10px;
+
+  font-family: 'lemonade',sans-serif;
+  font-size: 28px;
+  line-height: 1.8;
+
+  box-shadow: 8px 8px 0px #000; /* chunky shadow */
+
+  transform: rotate(-1deg); /* VERY subtle tilt */
+
+}
+
+.memory-box p {
+  margin-top: 0;
+  transform: none;
+}
+
+.memory-box::after {
+  content: "🐾";
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+  font-size: 28px;
+}
+.trait {
+  background-color: #ffe4ec;
+  padding: 4px 8px;
+  border-radius: 10px;
+
+  display: inline-block;
+  background-color: #fff;
+  border: 2px solid black;
+  border-radius: 12px;
+  padding: 4px 10px;
+  margin: 3px 4px;
+
+  box-shadow: 2px 2px 0px black;
+
+  font-size: 20px;
+}
+.desc {
+  margin-bottom: 50px;
+  line-height: 1.4;
+}
+
+.meaning {
+  line-height: 1.4;
+}
+.milky-title {
+  font-family: 'milkyway', sans-serif;
+}
+.lucky-photo {
+  position: absolute;
+
+  top: 110px;
+  right: 180px;
+
+  width: 300px;
+  height: auto;
+
+  z-index: 1;
+
+  opacity: 0.95;
+}
+
+.memory-box {
+  z-index: 2;
+}
+
+.paw-text:hover {
+  transform: translateY(-3px);
+  text-shadow: 0 0 8px rgb(0, 255, 13);
+}
+body {
+  cursor: none;
+}
+
+#custom-cursor {
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  pointer-events: none;
+  z-index: 99999;
+
+  font-size: 30px;
+}
+.memory-bone {
+  position: absolute;
+
+  bottom: 120px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  display: inline-block;
+
+  z-index: 10;
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition: opacity 1.5s ease;
+}
+
+.memory-bone.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.memory-bone img {
+  width: 260px;
+  height: auto;
+
+  display: block;
+ transition: transform 0.4s ease;
+  
+}
+
+.memory-bone img:hover {
+  transform: scale(1.05);
+}
+
+
+.memory-bone .tag-text {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  font-size: 32px;
+
+  color: black;
+
+  font-family: 'lemonade', sans-serif;
+
+  pointer-events: none;
+}
+.in-bone {
+  position: absolute;
+
+  bottom: 60px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  z-index: 10;
+}
+
+.in-bone img {
+  width: 240px;
+
+  transition: transform 0.4s ease;
+}
+
+.in-bone img:hover {
+  transform: scale(1.05);
+}
+
+.in-bone .tag-text {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  font-size: 28px;
+
+  color: black;
+
+  pointer-events: none;
+}
